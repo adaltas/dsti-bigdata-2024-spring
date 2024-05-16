@@ -76,39 +76,3 @@ apache/nifi-registry:latest
 8) edit the client to add the registry url (http://dockercontainer.gateway.ip.here:18080)
 9) confirm that this worked by versioning the flow Get/Put flow that we created earlier
 10) congratulations! you just created and versioned your first flow
-
-
-
-
-
-
-
-
-
-#### explore processors - ListFile & FetchFile
-- config of processor
-- why GetFile is not robust
-- check the memory for ListFile + FetchFile vs. GetFile
-
-#### explore processors - PutEmail
-- config of processor
-
-#### explore processors - UpdateRecord
-- config of processor
-
-#### explore processors - PutHDFS
-- config of processor
-- copy core-site.xml, hdfs-site.xml to container
-
-#### explore processors - DeleteHDFS
-- config of processor
-
-#### explore processors - TailFile (log)
-
-### Instructions (more comfortable)
-
-#### explore processors - listSFTP & FetchSFTP
-
-#### explore processors - PutIceberg
-
-#### explore processors - 
