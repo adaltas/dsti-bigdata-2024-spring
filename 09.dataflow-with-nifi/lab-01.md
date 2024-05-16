@@ -74,7 +74,7 @@ apache/nifi-registry:latest
 6) open nifi UI and open  `Controller Settings` (accessed through the hamburger in the top right corner of the UI)
 7) open the Registry Clients tab and add a new Registry Client (the + button)
 8) edit the client to add the registry url (http://dockercontainer.gateway.ip.here:18080)
-9) confirm that this worked by versioning versioning your flow from (the fancy title for the first part of the lab goes here)
+9) confirm that this worked by versioning the flow Get/Put flow that we created earlier
 10) congratulations! you just created and versioned your first flow
 
 
