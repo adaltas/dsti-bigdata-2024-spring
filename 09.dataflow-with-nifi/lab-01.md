@@ -8,7 +8,7 @@
 - Create basic NiFi dataflow
 - Version our first flow with NiFi-Registry
 
-### Instructions (less comfortable)
+### Instructions
 
 #### launch NiFi from docker image and create first flow
 
