@@ -51,11 +51,13 @@ Note that this is not the main use for funnels but provides a nice place holder 
 
 13) add a failure relationship from `PutFile` processor to a funnel and a success relationship to the other funnel
 14) configure the `GetFile` processor to "get" files from your 'uploads` directory
-15) configure the 'PutFile` processor to "put" files in your 'downloads' directory
-16) left click on the `GetFile` processor and start it. You should soon see your file qued in the success relationship between GetFile and PutFile
-17) left click on and start the `PutFile` processor
-18) you should soon see a file qued in the success relationship between the PutFile processor and the funnel.
-19) congratualtions! you've just created your first dataflow using nifi!
+15) while configuring the `GetFile` processor it is important to note that the 'Keep Source File' setting defaults to 'false'. This means that once the processor has gotten the file, it will attempt to delete the origin file.  
+for now we'll change this setting to true
+16) configure the 'PutFile` processor to "put" files in your 'downloads' directory
+17) left click on the `GetFile` processor and start it. You should soon see your file qued in the success relationship between GetFile and PutFile
+18) left click on and start the `PutFile` processor
+19) you should soon see a file qued in the success relationship between the PutFile processor and the funnel.
+20) congratualtions! you've just created your first dataflow using nifi!
 
 #### launch NiFi Registry and configure it to work with the NiFi instance
 
