@@ -49,5 +49,6 @@ We've just implemented the first basic building block of a NiFi flow that can be
 
 ### Bonus
 
-1) Review the following tutorial on the [List/Fetch pattern](https://www.youtube.com/watch?v=7mbxJxjGj3w), making note of the additional pattern that makes use of a `RecordWriter` to provide even better control of the flow. Update your flow to make use of the RecordWriter.
-2) Review the [videos](https://www.youtube.com/watch?v=RjWstt7nRVY) on anti-patterns in NiFi from one of its co-creators.
+1) Review the following tutorial on the [List/Fetch pattern](https://www.youtube.com/watch?v=7mbxJxjGj3w), making note of the additional pattern that makes use of a `RecordWriter` to provide even better control of the flow. Update your flow to make use of the RecordWriter.  
+2) Review the [videos](https://www.youtube.com/watch?v=RjWstt7nRVY) on anti-patterns in NiFi from one of its co-creators.  
+3) Review the 'Listing Strategy' on the ListFile processor and learn the different listing strategy methods and how they are implemented.
