@@ -1,10 +1,12 @@
 # Big Data Ecosystem
 
-## Lab \<lab number>: NiFi basic
+## lab-01: NiFi basic
 
 ### Goals
 
-- Create basic NiFi ELT dataflow
+- Become familiar with the NiFi UI
+- Create basic NiFi dataflow
+- Version our first flow with NiFi-Registry
 
 ### Instructions (less comfortable)
 
@@ -57,7 +59,6 @@ for now we'll change this setting to true
 17) right click on the `GetFile` processor and start it. You should soon see your file qued in the success relationship between GetFile and PutFile
 18) right click on and start the `PutFile` processor
 19) you should soon see a file qued in the success relationship between the PutFile processor and the funnel.
-20) congratualtions! you've just created your first dataflow using nifi!
 
 #### launch NiFi Registry and configure it to work with the NiFi instance
 
@@ -77,4 +78,3 @@ apache/nifi-registry:latest
 7) open the Registry Clients tab and add a new Registry Client (the + button)
 8) edit the client to add the registry url (http://dockercontainer.gateway.ip.here:18080)
 9) confirm that this worked by versioning the flow Get/Put flow that we created earlier
-10) congratulations! you just created and versioned your first flow
