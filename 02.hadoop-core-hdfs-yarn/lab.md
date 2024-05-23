@@ -9,26 +9,44 @@
 - Submit an application in YARN
 - Track an application using the YARN Web UI
 
+**Before you start**
+
+As a member of a group, you have permission to work within resources named after your group name. 
+To make it easier to reference your group name in scripts and commands, you can create an environment variable called GROUP using this script: 
+
+```bash
+echo "export GROUP=$(id -G -n $USER | grep -oP '(?<=users ).*')" >> .bashrc
+source .bashrc
+```
+
+After running this script, you can use the variables $USER and $GROUP to reference your user and group name respectively in your scripts and commands.
+
 ### Copy files to HDFS
 
 Using the official [HDFS DFS Commands Guide](https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-common/FileSystemShell.html):
 
-1. Create a directory named after your username in your group HDFS directory. E.g. `/education/dsti_2023_fallbda_1/johndoe`
+1. Create a directory named after your `$USER` in your `$GROUP` HDFS directory (`/education/$GROUP/$USER`)
 2. Create a subdirectory `lab2` in the directory created in 1.
-3. Create a file named `sentence1.txt` on the local file system and write a sentence inside that file
+3. Create a file named `sentence.txt` on the local file system (`/home/$USER/lab1`) and write a sentence inside that file
 4. Copy the file to your `lab2` HDFS directory
-5. Get information about the blocks composing your file, their replica and locations using `hadoop fsck`
+5. Get information about the blocks composing your file, their replica and locations using `hdfs fsck <path-to-your-file>`
 
 ### Submit an application in YARN
 
 To test YARN, we will run the Pi example from the MapReduce example JAR. This is a MapReduce program that computes Pi using the [Quasi-Monte Carlo method](https://en.wikipedia.org/wiki/Quasi-Monte_Carlo_method) (1st argument = number of mappers, 2nd argument = number of samples).
 
 1. Run the command:
+
+   ```bash
+   yarn jar /usr/hdp/3.1.0.0-78/hadoop-mapreduce/hadoop-mapreduce-examples-3.1.1.3.1.0.0-78.jar pi 6 100000000
    ```
-   yarn jar /usr/hdp/3.1.0.0-78/hadoop-mapreduce/hadoop-mapreduce-examples-3.1.1.3.1.0.0-78.jar pi 4 100000000
-   ```
+
 2. Wait until you find the result
 3. Run the command `yarn app -list` that shows your apps running in YARN
+
+### Setting up password-less SSH
+
+Follow tutorial: [How to Setup Passwordless SSH Login](https://linuxize.com/post/how-to-setup-passwordless-ssh-login/)
 
 ### Accessing Hadoop Web UIs using Kerberos
 
@@ -69,6 +87,7 @@ The configuration depends on your OS:
   - After that you can get a Kerberos ticket using `kinit $USER` (same user name that the one used to connect with SSH)
   - Check your ticket with `klist`
   - Add the following properties in your Firefox `about:config` page:
+
     ```ini
     network.negotiate-auth.delegation-uris = .au.adaltas.cloud
     network.negotiate-auth.trusted-uris = .au.adaltas.cloud
@@ -87,14 +106,16 @@ Once that your computer and your Firefox browser are configured and that you hav
 
 The WordCount example is also located in the MapReduce example JAR. It takes several arguments:
 
-- 1 or more input directories
+- 1 or more input directory
 - 1 output directory
 
-1. Look at the content of the input directory we will use: `/education/dsti_2023_fallbda_1/resources/lab2`
+1. Look at the content of the input directory: `/education/$GROUP/resources/lab2`
 2. Run the command:
+
    ```bash
-   yarn jar /usr/hdp/3.1.0.0-78/hadoop-mapreduce/hadoop-mapreduce-examples-3.1.1.3.1.0.0-78.jar \
-    wordcount /education/dsti_2023_fallbda_1/resources/lab2 \
-    /education/dsti_2023_fallbda_1/$USER/lab2/output-moby-dick
+   yarn jar /usr/hdp/current/hadoop-mapreduce-client/hadoop-mapreduce-examples-3.1.1.3.1.0.0-78.jar \
+    wordcount /education/$GROUP/resources/lab2 \
+    /education/$GROUP/$USER/lab2/output-moby-dick
    ```
-3. Check out the output directory
+   
+3. Check out the output directory: `/education/$GROUP/$USER/lab2/output-moby-dick`
