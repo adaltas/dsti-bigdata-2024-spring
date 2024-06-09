@@ -14,7 +14,7 @@ For this lab we will be using a very small dataset of NYC taxi drivers.
 
 Using the official [Hive Data Definition Langage](https://cwiki.apache.org/confluence/display/Hive/LanguageManual+DDL):
 
-1. Using the HDFS CLI, take a look at the data used for this lab at `/education/dsti_2024_fallbda_1/resources/lab4/nyc_drivers/drivers.csv`
+1. Using the HDFS CLI, take a look at the data used for this lab at `/education/$GROUP/resources/lab4/nyc_drivers/drivers.csv`
 
 2. Copy the `nyc_drivers` folder to your user directory in HDFS:
 
