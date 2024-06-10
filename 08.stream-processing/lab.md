@@ -1,6 +1,6 @@
 # Data Engineering with Spark
 
-## Lab 6: Structured Streaming
+## Lab 4: Structured Streaming
 
 ### Goals
 

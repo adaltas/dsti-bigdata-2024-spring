@@ -66,7 +66,8 @@ spark.sql("SELECT * FROM table")
 
 ## Spark Ecosystem
 
-**ADD IMAGE**
+![Apache Spark Ecosystem](./image/spark_ecosystem.png)
+
 
 ## Machine Learning With Spark: packages
 

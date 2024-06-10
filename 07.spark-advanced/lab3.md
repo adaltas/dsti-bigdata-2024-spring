@@ -1,10 +1,12 @@
 # Data Engineering with Spark
 
-## Lab 5: Machine Learning With Spark
+## Lab 3: Machine Learning With Spark
 
 ### Prerequisites
 
-Connect to the Adaltas cloud cluster using OpenVPN.
+- Connect to the [Databricks Community Edition](https://community.cloud.databricks.com/login.html)
+- Upload the provided notebook
+- If needed, upload the dataset
 
 ### Goals
 
@@ -17,8 +19,8 @@ Learn how to build ML models with Spark, analyzing AirBnB data:
 
 ### Lab resources
 
-- The notebook
-- The data: `airbnb_clean.csv` that can be found in `/education/ece/big-data/2020/fall/bda/resources/lab5/`
+- Notebook
+- The data: `sf-listings-2019-03-06-clean.csv`
 
 ### Useful links
 
