@@ -23,7 +23,7 @@ Analyze DataFrames with SparkSQL
 ### Useful links
 
 - [PySpark Documentation](https://spark.apache.org/docs/latest/api/python/index.html)
-- [Pyspark SQL Module doc](https://spark.apache.org/docs/latest/api/python/reference/pyspark.sql.html)
+- [Pyspark SQL Module doc](https://spark.apache.org/docs/latest/api/python/reference/pyspark.sql/index.html)
 
 ### TO DO
 
